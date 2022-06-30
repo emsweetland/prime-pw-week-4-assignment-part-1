@@ -11,54 +11,79 @@ function hello() {
 // Call the function to test
 console.log('Test - should say "Hello World!"', hello());
 
-
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
-function helloName( name ) {
-  return;
+function helloName(name) {
+  return  'hello,' + ' ' + name;
 }
 // Remember to call the function to test
-
+console.log(helloName('em'));
+console.log(helloName('yoshi'));
+console.log(helloName('diddy'));
+console.log(helloName('guthrie'));
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
-  // return firstNumber + secondNumber;
+function addNumbers( firstNumber, secondNumber ) {
+  let answer = firstNumber + secondNumber;   // return firstNumber + secondNumber;
+  return answer;
 }
-
+console.log('addNumbers with 5 and 9:', addNumbers(5,9) );
+console.log('addNumbers with 22 and 3:', addNumbers(22,3) );
+console.log('addNumbers with -6 and 7:', addNumbers(-6,7) );
+console.log('addNumbers with 555 and 666:', addNumbers(555,666) );
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-
+function multiplyThree( firstNumber, secondNumber, thirdNumber){
+    let answer = firstNumber * secondNumber * thirdNumber;
+    return answer;
 }
-
+console.log('multiplyThree with 1, 2, 3:', multiplyThree(1,2,3));
+console.log('multiplyThree with 12, 22, 23:', multiplyThree(12,22,23));
+console.log('multiplyThree with -31, 42, 53:', multiplyThree(-31,42,53));
+console.log('multiplyThree with 0.5, 8, 12:', multiplyThree(0.5,8,12));
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
-function isPositive( number ) {
-  if ( number > 0 ){
-    return;
+function isPositive(number) {
+  if (number>0){
+    return true;
   }
-    return;
+  else {
+    return false;
+  }
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
-console.log( 'isPositive - should say true', isPositive(3) );
-console.log( 'isPositive - should say false', isPositive(0) );
-console.log( 'isPositive - should say false', isPositive(-3) );
-
+console.log( 'isPositive 3', isPositive(3) );
+console.log( 'isPositive 0', isPositive(0) );
+console.log( 'isPositive -3', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
+let laundry = ['socks','shirts','pants']
+let dishes = []
 function getLast( array ) {
-
+  return array[array.length-1]
 }
+console.log(getLast(laundry));
+console.log(getLast(dishes));
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find( value, array ){
-  
-}
+    dishes = ['mug', 'knife', 'plate']
+function find( value, array ) {
+  if(array.includes(value)){
+        return true;
+      }
+      else{
+        return false;
+      }
+  }
+console.log(find('pants',laundry));
+console.log(find('blankets',laundry));
+console.log(find('mug',dishes))
+console.log(find('pants',dishes))
 
 // ----------------------
 // Stretch Goals

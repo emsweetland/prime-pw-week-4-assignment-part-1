@@ -14,13 +14,13 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName(name) {
-  return  'hello,' + ' ' + name;
+  return  console.log('hello,' , name)
 }
 // Remember to call the function to test
-console.log(helloName('em'));
-console.log(helloName('yoshi'));
-console.log(helloName('diddy'));
-console.log(helloName('guthrie'));
+helloName('em')
+helloName('yoshi');
+helloName('diddy');
+helloName('guthrie');
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
@@ -72,8 +72,8 @@ console.log(getLast(dishes));
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
     dishes = ['mug', 'knife', 'plate']
-function find( value, array ) {
-  if(array.includes(value)){
+function find( value, array ) { //for loop each element in the array then compare to see if theye the same
+  if(array.includes(value)){    
         return true;
       }
       else{
@@ -117,8 +117,22 @@ console.log('sum of array',sumAll(anArray))
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+    anArray =[-5, .02, 3, 7.5]
+    otherArray = [-3, -5, -7]
+let newArray=[]
+function positiveArray(array){
+  for( i = 0; i < array.length; i++);//loop thorugh items in an array
+  console.log(array)
+  if (isPositive(array[i])=true){  //take a positive number and add to new array   (?:???>>>?????>!!!!!!!!>:OOOOOO)
+    newArray.push(array[i])
+    console.log(newArray)}}
 
 
+
+
+  
+  positiveArray(anArray)
+  positiveArray(otherArray)
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
